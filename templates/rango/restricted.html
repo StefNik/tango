@@ -1,0 +1,12 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+    Add a Category
+{% endblock %}
+{% block body_block %}
+        {% if user.is_authenticated %}
+            <h1>Hi {{ user.username }} this is a restricted page</h1>
+        {% else %} <!-- this else never runs -->
+          This is a restricted page and it never runs.
+        {% endif %}
+{% endblock %}
